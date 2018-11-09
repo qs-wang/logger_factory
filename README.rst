@@ -17,15 +17,24 @@ Usage
 =====
 Default logger:
 .. code-block:: python
-    from logger_factory import create_logger
+   
+   from logger_factory import create_logger,config_logger
 
-    logger = create_logger("mylogger")
-    logger.info("hello world")
+   config_logger()
+
+   logger = create_logger("mylogger")
+
+   logger.info("hello world")
+
 
 Config via config.ini file:
 .. code-block:: python
-    from logger_factory import create_logger
+    
+    from logger_factory import create_logger,config_logger
 
-    logger = create_logger("mylogger", "config.ini")
+    config_logger("/your_path_to_file/config.ini")
+
+    logger = create_logger("mylogger")
+    
     logger.info("hello world")
 
